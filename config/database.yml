@@ -1,15 +1,15 @@
 # SQLite version 3.x
 #   gem install sqlite3-ruby (not necessary on OS X Leopard)
-#development:
-#  adapter: sqlite3
-#  database: db/development.sqlite3
-#  pool: 5
-#  timeout: 5000
-  
-  
 development:
-  adapter: odbc
-  dsn: vlm
+  adapter: sqlite3
+  database: db/development.sqlite3
+  pool: 5
+  timeout: 5000
+  
+  
+#development:
+ # adapter: odbc
+  #dsn: vlm
   #conn_str: DRIVER=Microsoft.Jet.OLEDB.4.0;OPTIONS=;DATABASE=C:\channelaustin\vlm.mdb;UID=;PWD=
   #Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\channelaustin\vlm.mdb;User Id=admin;Password=;
 

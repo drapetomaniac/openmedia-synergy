@@ -1,0 +1,23 @@
+<h1>Listing titles</h1>
+
+<table>
+  <tr>
+  	<td>id</td>
+	<td>description</td>
+	<td>playing time</td>
+	<td>producer</td>
+	<td>prod date</td>
+  </tr>
+
+<% for title in @titles %>
+  <tr>
+  	<td><%= title[0] %></td>
+	<td><%= title[1] %></td>
+	<td><%= title[3] %></td>
+	<td><%= title[7] %></td>	
+	<td><%= title[10] %></td>	
+    </tr>
+<% end %>
+</table>
+
+

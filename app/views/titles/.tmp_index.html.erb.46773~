@@ -1,0 +1,18 @@
+<h1>Listing titles</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for titles in @titles %>
+  <tr>
+    <td><%= link_to 'Show', titles %></td>
+    <td><%= link_to 'Edit', edit_titles_path(titles) %></td>
+    <td><%= link_to 'Destroy', titles, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New titles', new_titles_path %>
