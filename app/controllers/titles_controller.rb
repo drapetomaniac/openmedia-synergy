@@ -3,10 +3,19 @@ class TitlesController < ApplicationController
   # GET /titles.xml
   def index
     #@titles = Titles.find(:all)
-    db = AccessDb.new('c:\channelaustin\vlm.mdb')
+    db = AccessDb.new('C:\Documents and Settings\Administrator\Desktop\ChannelAustinVLMFiles\vlm.mdb')
     db.open
     
-    db.query("SELECT * FROM Titles order by 10;")
+    db.query("SELECT 
+    [Events]![event_id],
+    [Titles]![description],
+    [Events]![title_desc],
+    [Events]![start_datetime],
+    [Events]![length],
+    [Events]![file_name], 
+    [Events]![channel]
+    FROM [Events], [Titles] where [Events]![title] = [Titles]![title] and [Events]![start_datetime] > Date()   
+;")
     @fields = db.fields
     @titles = db.data
     
