@@ -12,6 +12,7 @@ xml.rss :version => "2.0" do
                     xml.duration title[4]
                     xml.pubDate title [3].to_s
                     xml.guid title[0]
+                    xml.link title[5]                     
                   end
     end
   end
