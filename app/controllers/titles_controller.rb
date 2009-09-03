@@ -3,7 +3,7 @@ class TitlesController < ApplicationController
   # GET /titles.xml
   def index
     #@titles = Titles.find(:all)
-    db = AccessDb.new('C:\Documents and Settings\Administrator\Desktop\ChannelAustinVLMFiles\vlm.mdb')
+    db = AccessDb.new('C:\openaustin\vlm.mdb')
     db.open
     
     db.query("SELECT 
@@ -44,6 +44,25 @@ class TitlesController < ApplicationController
 14 term_type
 15 expiration_date
 =end
+  end
+  
+  def program
+        db = AccessDb.new('C:\openaustin\vlm.mdb')
+        db.open
+        db.query("Insert INTO  
+        [Events]![event_id],
+        [Events]![title_desc]
+        VALUES ('777','Monkey')
+    ;")
+
+        #db.execute("INSERT INTO HallOfFame VALUES ('Dave', 'Concepcion');")
+        db.close
+
+
+    # dbs.Execute " INSERT INTO Employees " _
+     #     & "(FirstName,LastName, Title) VALUES " _
+      #    & "('Harry', 'Washington', 'Trainee');"
+    
   end
 
   # GET /titles/1
